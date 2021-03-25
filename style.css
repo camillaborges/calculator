@@ -1,0 +1,76 @@
+body {
+    background-image: url("background.jpg");
+    background-size: cover;
+}
+.center {
+    text-align: center;
+    font-size: 50px;
+    text-decoration:underline;
+    color:rgb(14, 6, 6);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.container {
+    display: inline;
+}
+.form {
+    display: inline-block;
+    position:relative;
+    margin: 5px 10px 15px 10px;
+    padding: 0 0 0 10px; 
+    background-color: grey;
+    height: auto;
+    width: 45%;
+    border:solid;
+}
+
+.myform {
+    margin: 5px 0 10px 0;
+}
+
+
+.resultado {
+    text-align:center;
+    text-decoration:underline;
+    font-size:25px;
+    padding: 15px 0 15px 0;
+}
+
+.stories {
+    display:inline-block;
+    position:absolute;
+    margin: 5px 10px 10px 10px;
+    padding: 0 0 0 10px;
+    background-color: grey;
+    height: auto; 
+    width:45%;
+    border:solid;
+    
+}
+
+.calcular {
+    background-color:white;
+    color:black;
+    border:none;
+    border-radius:5px;
+    margin: 10px 0 10px 0;
+    padding:10px 20px;
+    text-align:center;
+    text-decoration: none;
+    display:inline-block;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.deletar {
+    background-color:white;
+    color:black;
+    border:none;
+    border-radius:5px;
+    margin: 55px 0 10px 0;
+    padding:10px 20px;
+    text-align:center;
+    text-decoration: none;
+    display:inline-block;
+    font-size: 12px;
+    cursor: pointer;
+}
