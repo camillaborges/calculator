@@ -49,12 +49,14 @@ function escolha(soma, sub, division, multiplicacion) {
 }
 
 function insereItemHistorico(item) {
-   let div = document.createElement('div'); // is a node
-   div.innerHTML = `<div class="item"> ${item.num1} ${item.operation} ${item.num2} = ${item.resultado}</div>`;
-   document.querySelector(".result").appendChild(div);
+  let div = document.createElement('div'); // is a node
+  div.innerHTML = `<div class="item"> ${item.num1} ${item.operation} ${item.num2} = ${item.resultado}</div>`;
+  document.querySelector(".result").appendChild(div);
 }
 
 function deletaItemHistorico() {
-   document.querySelector(".result").innerHTML = " ";
-   document.querySelector(".resultado").innerHTML = " ";
+ document.querySelector(".result").innerHTML = " ";
+ document.querySelector(".resultado").innerHTML = " ";
+ 
+ 
 }

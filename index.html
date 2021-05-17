@@ -4,36 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+
+    <title>SUM</title>
 </head>
 <body>
    <div class="container">
-      <h1 class="center">Calculator</h1> 
-
-      <div class="form">
-         <h2>Numbers</h2>
-         <form class="myform">
-            <input class="num1" type="number"> 
-            <select class="operador">
-               <option class="soma" value="+"> + </option>
-               <option class="subtracion" value="-"> - </option>
-               <option class="multiplicacao" value="*"> * </option>
-               <option class="divisao" value="/"> / </option>
-            </select>
-            <input class="num2" type="number"> 
-            <span> = </span>
-         </form>
-         <span class="resultado"></span><br>
-         <button onclick="escolha()" class="calcular">Result</button>      
-      </div>
+    <h1>Calculator 🖩</h1> 
+   
+   <div class="form">
+   <h2>fill the fields below</h2>
+      <form class="myform">
+         <input class="num1" type="number"> 
+         <select class="operador">
+            <option class="soma" value="+"> + </option>
+            <option class="subtracion" value="-"> - </option>
+            <option class="multiplicacao" value="*"> * </option>
+            <option class="divisao" value="/"> / </option>
+         </select>
+         <input class="num2" type="number"> 
+      </form>
+      <p class="resultado"></p><br>
+      <button onclick="escolha()" class="calcular">result</button>
       
-      <div class="stories">
-         <h1>sum history</h1>
-         <p class="result"></p>
-         <button onclick="deletaItemHistorico()" class="deletar">Delete</button> 
-      </div>
+        
    </div>
-   <!-- javascript files -->
+   
+   <div class="stories">
+    <h2>Results</h2>
+    <p class="result"></p>
+    <button onclick="deletaItemHistorico()" class="deletar">delete</button>
+       
+   </div>
+
+</div>
+
    <script src="main.js"></script>
 </body>
 </html>
