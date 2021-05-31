@@ -1,44 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet"/>
 
     <title>SUM</title>
-</head>
-<body>
-   <div class="container">
-    <h1>Calculator 🖩</h1> 
-   
-   <div class="form">
-   <h2>fill the fields below</h2>
-      <form class="myform">
-         <input class="num1" type="number"> 
-         <select class="operador">
-            <option class="soma" value="+"> + </option>
-            <option class="subtracion" value="-"> - </option>
-            <option class="multiplicacao" value="*"> * </option>
-            <option class="divisao" value="/"> / </option>
-         </select>
-         <input class="num2" type="number"> 
-      </form>
-      <p class="resultado"></p><br>
-      <button onclick="escolha()" class="calcular">result</button>
-      
-        
-   </div>
-   
-   <div class="stories">
-    <h2>Results</h2>
-    <p class="result"></p>
-    <button onclick="deletaItemHistorico()" class="deletar">delete</button>
-       
-   </div>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Calculator 🖩</h1>
 
-</div>
+      <div class="form">
+        <h2>fill the fields below</h2>
+        <form class="myform">
+          <input class="num1" type="number" />
+          <select class="operador">
+            <option class="soma" value="+">+</option>
+            <option class="subtracion" value="-">-</option>
+            <option class="multiplicacao" value="*">*</option>
+            <option class="divisao" value="/">/</option>
+          </select>
+          <input class="num2" type="number" />
+        </form>
+        <p class="resultado"></p>
+        <br />
+        <button onclick="escolha()" class="calcular">result</button>
+      </div>
 
-   <script src="main.js"></script>
-</body>
+      <div class="stories">
+        <h2>Results</h2>
+        <p class="result"></p>
+        <button onclick="deletaItemHistorico()" class="deletar">delete</button>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
 </html>
