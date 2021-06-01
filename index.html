@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;1,200&family=Roboto:wght@300;700&display=swap" rel="stylesheet"/>
 
-    <title>SUM</title>
+    <title>Calculator</title>
 </head>
 <body>
    <div class="container">
@@ -14,26 +14,26 @@
    
    <div class="form">
    <h2>fill the fields below</h2>
-      <form class="myform">
-         <input class="num1" type="number"> 
-         <select class="operador">
-            <option class="soma" value="+"> + </option>
-            <option class="subtracion" value="-"> - </option>
-            <option class="multiplicacao" value="*"> * </option>
-            <option class="divisao" value="/"> / </option>
+      <form class="form-calculator">
+         <input class="field-one" type="number"> 
+         <select class="operator">
+            <option class="empty"> </option>
+            <option class="sum" value="+">+</option>
+            <option class="subtraction" value="-">-</option>
+            <option class="multiplication" value="*">*</option>
+            <option class="division" value="/">/</option>
          </select>
-         <input class="num2" type="number"> 
+         <input class="field-two" type="number">
       </form>
-      <p class="resultado"></p><br>
-      <button onclick="escolha()" class="calcular">result</button>
-      
+         <p class="result"></p><br> 
+         <button onclick="select()" class="btn-calculator">result</button>
         
    </div>
    
-   <div class="stories">
-    <h2>Results</h2>
-    <p class="result"></p>
-    <button onclick="deletaItemHistorico()" class="deletar">delete</button>
+   <div class="historic">
+    <h2>Results history</h2>
+    <p class="historical-result"></p>
+    <button onclick="deleteHistory()" class="btn-delete">delete</button>
        
    </div>
 

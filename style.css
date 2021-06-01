@@ -15,38 +15,43 @@ h1 {
 }
 
 .form,
-.stories {
+.historic {
     margin: 0 auto;
     border-top: 2px solid white;
     border-bottom: 2px solid white;
     width: 50%; 
     height: auto;
     color: rgb(44, 40, 40);
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-size: .755rem;
 
 }
 
 
-.stories {
-    margin-top: 10em;
+.historic {
+    margin-top: 8em;
     margin-bottom: 2em;
 }
 
 
-.resultado,
+.historical-result,
 .result {
+    font-family: 'Raleway', sans-serif;
     text-align:center;
     font-size:1rem;
     color: rgb(86, 55, 158);
     font-weight: 700;
+    
 }
 
-.resultado {
+.result {
     font-size: 1.5rem;
     margin: 0;
 }
 
-.calcular,
-.deletar {
+.btn-delete,
+.btn-calculator {
     background-color:white;
     color:black;
     border:none;
@@ -64,12 +69,16 @@ input,
 select {
     border: none; 
     width: 10%;
+    height: 2em;
     margin-right: 1em;
     margin-top: 1em;
     border-radius: 5px;
+    font-weight: bold;
+    text-align:center;
     
 }
 
 select {
-    width: 5%;
+    min-width: 10%;
+    
 }

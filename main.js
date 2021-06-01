@@ -1,62 +1,62 @@
 let historic = [];
 
-function escolha(soma, sub, division, multiplicacion) {
+function select(sum, subtraction, multiplication, division) {
 
-   function soma(num1, num2) {
-      return parseInt(num1) + parseInt(num2);
+   function sum(fieldOne, fieldTwo) {
+      return parseInt(fieldOne) + parseInt(fieldTwo);
    }
 
-   function sub(num1, num2) {
-      return parseInt(num1) - parseInt(num2);
+   function subtraction(fieldOne, fieldTwo) {
+      return parseInt(fieldOne) - parseInt(fieldTwo);
    }
 
-   function division(num1, num2) {
-      return parseInt(num1) / parseInt(num2);
+   function division(fieldOne, fieldTwo) {
+      return parseInt(fieldOne) / parseInt(fieldTwo);
    }
 
-   function multiplicacion(num1, num2){
-      return parseInt(num1) * parseInt(num2);
+   function multiplication(fieldOne, fieldTwo){
+      return parseInt(fieldOne) * parseInt(fieldTwo);
    }
 
-   const operetion = document.querySelector(".operador");
-   let num1 = document.querySelector(".num1").value;
-   let num2 = document.querySelector(".num2").value;
-   let resultado;
-   const operation = operetion.value;
+   const fieldOperator = document.querySelector('.operator');
+   const fieldOne = document.querySelector('.field-one').value;
+   const fieldTwo = document.querySelector('.field-two').value;
+   let result;
+   const operation = fieldOperator.value;
 
    switch (operation) {
-    case "+":  
-      resultado = soma(num1, num2);
+    case '+':  
+      result = sum(fieldOne, fieldTwo);
     break;
     case '-':
-      resultado = sub(num1,num2);
+      result = subtraction(fieldOne,fieldTwo);
     break;
     case '*':
-      resultado = multiplicacion(num1, num2);
+      result = multiplication(fieldOne, fieldTwo);
     break;
     case '/':
-      resultado = division(num1, num2);  
+      result = division(fieldOne, fieldTwo);  
    }
 
-   document.querySelector(".resultado").innerHTML = resultado;
-   document.querySelector(".myform").reset();   
+   document.querySelector('.result').innerHTML = result;
+   document.querySelector('.form-calculator').reset();   
    
 
-   let item = {num1, num2, resultado, operation};
+   let item = {fieldOne, fieldTwo, result, operation};
    historic.push(item);
 
-   insereItemHistorico(item);
+   insertHistoryItem(item);
 }
 
-function insereItemHistorico(item) {
+function insertHistoryItem(item) {
   let div = document.createElement('div'); // is a node
-  div.innerHTML = `<div class="item"> ${item.num1} ${item.operation} ${item.num2} = ${item.resultado}</div>`;
-  document.querySelector(".result").appendChild(div);
+  div.innerHTML = `<div class='item'> ${item.fieldOne} ${item.operation} ${item.fieldTwo} = ${item.result}</div>`;
+  document.querySelector('.historical-result').appendChild(div);
 }
 
-function deletaItemHistorico() {
- document.querySelector(".result").innerHTML = " ";
- document.querySelector(".resultado").innerHTML = " ";
+function deleteHistory() {
+ document.querySelector('.result').innerHTML = '';
+ document.querySelector('.historical-result').innerHTML = '';
  
  
 }
