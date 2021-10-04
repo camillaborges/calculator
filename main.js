@@ -23,7 +23,7 @@ function select(sum, subtraction, multiplication, division) {
    const fieldTwo = document.querySelector('.field-two').value;
    let result;
    const operations = fieldOperator.value;
-   const operationSimble = fieldOperator
+   const operationSimble = fieldOperator.options[fieldOperator.selectedIndex].innerHTML;
   
 
    function getOperation(type) {
@@ -44,47 +44,25 @@ function select(sum, subtraction, multiplication, division) {
       return operation[type]();
    }
 
-   let operator = getOperation(operations)
-   
-
-
-   
-   
-   
-   
-   /* switch (operation) {
-    case 'sum':  
-      result = sum(fieldOne, fieldTwo);
-    break;
-    case 'subtraction':
-      result = subtraction(fieldOne,fieldTwo);
-    break;
-    case 'multiplication':
-      result = multiplication(fieldOne, fieldTwo);
-    break;
-    case 'division':
-      result = division(fieldOne, fieldTwo);  
-   } */
+   let operator = getOperation(operations);
 
    document.querySelector('.result').innerHTML = Math.round(result*100)/100;
    document.querySelector('.form-calculator').reset();   
    
 
-   let item = {fieldOne, fieldTwo, result,operator, operationSimble};
+   let item = {fieldOne, fieldTwo, result, operator, operationSimble};
    historic.push(item);
 
-   insertHistoryItem(item);
+   insertHistoricItem(item);
 }
 
-function insertHistoryItem(item) {
+function insertHistoricItem(item) {
   let div = document.createElement('div'); // is a node
-  div.innerHTML = `<div class='item'> ${item.fieldOne} ${item.operationSimble.innerHTML} ${item.fieldTwo} = ${Math.round(item.operator *100)/100}</div>`;
+  div.innerHTML = `<div class='item'> ${item.fieldOne} ${item.operationSimble} ${item.fieldTwo} = ${Math.round(item.operator *100)/100}</div>`;
   document.querySelector('.historical-result').appendChild(div);
 }
 
-function deleteHistory() {
+function deleteHistoric() {
  document.querySelector('.result').innerHTML = '';
  document.querySelector('.historical-result').innerHTML = '';
-   
- 
 }
